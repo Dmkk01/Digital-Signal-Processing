@@ -1,4 +1,4 @@
-%% How to import audio data
+
 audio_file = 'Guitar.wav';        % Save path to tha audio file to a string  
 [signal, fs] = audioread(audio_file); % Read audio file to vector and its' sampling frequency to fs
 
@@ -37,25 +37,17 @@ signal_max_idx = find(signal == signal_max)
 signal_min_idx = find(signal == signal_min)
 
 %% Task b)
-% Generate a signal named 'signal_a' that is same as 'signal' but it is
-% reversed and scaled to 1
 
 signal_a = flip(signal)*gain;
 
 %% Task c)
-% Generate a vector that is equally long as 'signal' that grows linearly
-% from 0 to 1 and element-wise multiply 'signal' with it to generate
-% 'signal_b'. Scale 'signal_b' also to 1.
+
 
 signal_b = transpose(linspace(0,1, length(signal))).*signal * gain;
 
 
 %% d) 
-% Plot 'signal_a' and 'signal_b' to same figure but in different graphs
-% using subplot() so that 'signal_a' is on top of 'signal_b' and y-axises
-% are amplitude and x-axises are time in seconds. Name the plots
-% and all axises. Also set the axises so that there is no unnecessary
-% space in the plots.
+
 figure(2)
 
 subplot(2,1,1) 
