@@ -1,5 +1,4 @@
-%% %% ELEC-A6240 Computer Lab in Digital Signal Processing
-% Excercise 2.3
+
 
 % This time you have to create a fft from .mat file data. You can plot the
 % data to visualize and reason what kind of data you would like to see
